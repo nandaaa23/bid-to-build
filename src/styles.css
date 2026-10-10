@@ -1,0 +1,369 @@
+/* ==========================================================================
+   RAW — CAMPUS UNFILTERED
+   Angular Application Global Stylesheet
+   LBS Institute of Technology for Women, Poojappura, Thiruvananthapuram
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS & DARKER PURPLE PALETTE
+   -------------------------------------------------------------------------- */
+:root {
+  /* Street Brush & Modern Sans Typography */
+  --font-brush: 'Permanent Marker', 'Sedgwick Ave Display', cursive;
+  --font-distressed: 'Rubik Wet Paint', 'Permanent Marker', cursive;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: 'Space Grotesk', ui-monospace, monospace;
+
+  /* Acid Lime (High Voltage Accent) */
+  --raw-lime: #D7FF64;
+  --raw-lime-glow: rgba(215, 255, 100, 0.45);
+  --raw-lime-hover: #C6F547;
+
+  /* Darker Purple Palette (Midnight Underground Club Feel) */
+  --purple-abyss: #0F051D;
+  --purple-midnight: #1A0933;
+  --purple-deep: #250E46;
+  --purple-dark: #351463;
+  --purple-card: #200B3B;
+  --purple-electric: #6826D4;
+  --purple-neon: #8B4EFE;
+  --purple-glow: rgba(104, 38, 212, 0.35);
+
+  /* Cream & White */
+  --raw-cream: #F7F5F0;
+  --raw-white: #FFFFFF;
+  --raw-black: #0A0314;
+  --raw-danger: #FF3B5C;
+  --raw-success: #00F5D4;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --trans-fast: 0.15s ease;
+  --trans-normal: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  --trans-sway: 4s ease-in-out infinite;
+
+  --max-w: 1280px;
+}
+
+/* THEME: AFTER DARK (Default) */
+[data-theme="dark"] {
+  --bg-main: #0B0414;
+  --bg-secondary: #140726;
+  --bg-card: #1D0A38;
+  --bg-card-alt: #290F4D;
+  --bg-card-hover: #331361;
+  --text-main: #F7F5F0;
+  --text-secondary: #B9AED4;
+  --text-muted: #8174A3;
+  --border-color: rgba(139, 78, 254, 0.28);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-solid: #8B4EFE;
+
+  --accent-purple: #8B4EFE;
+  --accent-lime: #D7FF64;
+  --accent-lime-text: #0B0414;
+
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 1px rgba(139, 78, 254, 0.35);
+  --card-shadow-hover: 0 16px 40px rgba(104, 38, 212, 0.45), 0 0 18px rgba(215, 255, 100, 0.3);
+  --header-bg: rgba(11, 4, 20, 0.88);
+  --modal-bg: rgba(7, 2, 14, 0.9);
+  --checker-color: rgba(139, 78, 254, 0.03);
+}
+
+/* THEME: DISCO LIGHT */
+[data-theme="light"] {
+  --bg-main: #F7F5F0;
+  --bg-secondary: #EDE7DC;
+  --bg-card: #FFFFFF;
+  --bg-card-alt: #F2ECFF;
+  --bg-card-hover: #F8F5FF;
+  --text-main: #140726;
+  --text-secondary: #4A3E5C;
+  --text-muted: #7A6F8F;
+  --border-color: #250E46;
+  --border-subtle: #D8D0E3;
+  --border-solid: #250E46;
+
+  --accent-purple: #351463;
+  --accent-lime: #D7FF64;
+  --accent-lime-text: #140726;
+
+  --card-shadow: 4px 4px 0px #250E46;
+  --card-shadow-hover: 7px 7px 0px #250E46;
+  --header-bg: rgba(247, 245, 240, 0.92);
+  --modal-bg: rgba(20, 7, 38, 0.75);
+  --checker-color: rgba(37, 14, 70, 0.03);
+}
+
+/* --------------------------------------------------------------------------
+   2. GLOBAL BASE & RESET
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  overflow-x: hidden;
+  transition: background-color 0.35s ease, color 0.35s ease;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Retro checkerboard & ambient disco beams */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    linear-gradient(45deg, var(--checker-color) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--checker-color) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, var(--checker-color) 75%),
+    linear-gradient(-45deg, transparent 75%, var(--checker-color) 75%);
+  background-size: 44px 44px;
+  background-position: 0 0, 0 22px, 22px -22px, -22px 0px;
+}
+
+/* --------------------------------------------------------------------------
+   3. ANIMATIONS: SWAY, COME-IN, AND DISCO BEAMS
+   -------------------------------------------------------------------------- */
+
+/* Sway Animations (Requested by user) */
+.sway-item {
+  animation: itemSway 4.5s ease-in-out infinite alternate;
+}
+
+.sway-reverse {
+  animation: itemSwayRev 5s ease-in-out infinite alternate;
+}
+
+.sway-slow {
+  animation: itemSwaySlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes itemSway {
+  0% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-7px) rotate(1deg); }
+  100% { transform: translateY(-3px) rotate(2.5deg); }
+}
+
+@keyframes itemSwayRev {
+  0% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-8px) rotate(-1.5deg); }
+  100% { transform: translateY(-4px) rotate(-2.5deg); }
+}
+
+@keyframes itemSwaySlow {
+  0% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(-2px) rotate(-0.5deg); }
+}
+
+/* Come-In Animations (Requested by user) */
+.come-in {
+  animation: comeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.come-in-stagger-1 { animation: comeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.come-in-stagger-2 { animation: comeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+.come-in-stagger-3 { animation: comeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+.come-in-stagger-4 { animation: comeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+
+@keyframes comeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Neon Glow Pulse */
+@keyframes neonPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(215, 255, 100, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(215, 255, 100, 0.65), 0 0 45px rgba(139, 78, 254, 0.35);
+  }
+}
+
+/* Ambient Disco Beams */
+.ambient-beams {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.beam-ray {
+  position: absolute;
+  filter: blur(90px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.beam-purple-dark {
+  top: -10%;
+  left: 20%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(104, 38, 212, 0.28) 0%, transparent 70%);
+  animation: itemSwaySlow 12s ease-in-out infinite alternate;
+}
+
+.beam-lime-glow {
+  top: 25%;
+  right: -8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(215, 255, 100, 0.15) 0%, transparent 70%);
+  animation: itemSway 10s ease-in-out infinite alternate;
+}
+
+/* --------------------------------------------------------------------------
+   4. BRUSH TYPOGRAPHY CLASSES
+   -------------------------------------------------------------------------- */
+.font-brush {
+  font-family: var(--font-brush);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.font-distressed {
+  font-family: var(--font-distressed);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* --------------------------------------------------------------------------
+   5. BUTTONS & UI CONTROLS
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  transition: all var(--trans-normal);
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-lime {
+  background-color: var(--accent-lime);
+  color: var(--accent-lime-text);
+  border: 2px solid #140726;
+  box-shadow: 0 4px 18px rgba(215, 255, 100, 0.35);
+}
+
+.btn-lime:hover {
+  background-color: var(--raw-lime-hover);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(215, 255, 100, 0.6);
+}
+
+.btn-purple {
+  background-color: var(--purple-dark);
+  color: #FFFFFF;
+  border: 2px solid var(--purple-neon);
+  box-shadow: 0 4px 18px rgba(104, 38, 212, 0.4);
+}
+
+.btn-purple:hover {
+  background-color: var(--purple-electric);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(139, 78, 254, 0.6);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 2px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  background: rgba(215, 255, 100, 0.1);
+  border-color: var(--accent-lime);
+  color: var(--accent-lime);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: var(--raw-danger);
+  color: #FFFFFF;
+  border: 2px solid #000;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 1.05rem;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.8rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. BENTO CARDS BASE
+   -------------------------------------------------------------------------- */
+.bento-card {
+  background-color: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--trans-normal), box-shadow var(--trans-normal), border-color var(--trans-normal);
+}
+
+.bento-card:hover {
+  box-shadow: var(--card-shadow-hover);
+}
+
+/* Container max width */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 24px;
+}
