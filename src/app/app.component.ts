@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { HeroComponent } from './components/hero/hero.component';
@@ -12,6 +12,7 @@ import { RegistrationModalComponent } from './components/registration-modal/regi
 import { SuccessModalComponent } from './components/success-modal/success-modal.component';
 import { TrailerModalComponent } from './components/trailer-modal/trailer-modal.component';
 import { FloatingMisoComponent } from './components/floating-miso/floating-miso.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 import { EventService } from './services/event.service';
 
 @Component({
@@ -19,6 +20,7 @@ import { EventService } from './services/event.service';
   standalone: true,
   imports: [
     CommonModule,
+    PreloaderComponent,
     HeaderComponent,
     HeroComponent,
     DaysTimerComponent,
@@ -33,27 +35,30 @@ import { EventService } from './services/event.service';
     FloatingMisoComponent
   ],
   template: `
+    <!-- Preloader Animation -->
+    <app-preloader />
+
     <!-- Ambient Disco Glow Beams -->
     <div class="ambient-beams" aria-hidden="true">
       <div class="beam-ray beam-purple-dark"></div>
       <div class="beam-ray beam-lime-glow"></div>
     </div>
 
-    <!-- Header -->
+    <!-- Header (Decluttered & Clean) -->
     <app-header />
 
-    <!-- Main Content Container -->
+    <!-- Main Content Container with Scroll-Triggered Slide-Ins -->
     <main class="container">
       <app-hero />
-      <app-days-timer />
-      <app-events-discovery />
-      <app-my-events />
-      <app-sponsors />
-      <app-about />
+      <app-days-timer class="scroll-reveal" />
+      <app-events-discovery class="scroll-reveal" />
+      <app-my-events class="scroll-reveal" />
+      <app-sponsors class="scroll-reveal" />
+      <app-about class="scroll-reveal" />
     </main>
 
     <!-- Supercharged Footer -->
-    <app-footer />
+    <app-footer class="scroll-reveal" />
 
     <!-- Modals -->
     <app-registration-modal />
@@ -84,7 +89,7 @@ import { EventService } from './services/event.service';
     main.container {
       position: relative;
       z-index: 2;
-      padding-top: 30px;
+      padding-top: 24px;
     }
 
     .modal-backdrop {
@@ -131,8 +136,18 @@ import { EventService } from './services/event.service';
     }
   `]
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit, OnDestroy {
   readonly eventService = inject(EventService);
+
+  private observer: IntersectionObserver | null = null;
+
+  ngAfterViewInit(): void {
+    this.initScrollRevealObserver();
+  }
+
+  ngOnDestroy(): void {
+    if (this.observer) this.observer.disconnect();
+  }
 
   closeCancelModal(): void {
     this.eventService.pendingCancelPass.set(null);
@@ -141,5 +156,26 @@ export class AppComponent {
   confirmCancel(regId: string): void {
     this.eventService.cancelRegistration(regId);
     this.closeCancelModal();
+  }
+
+  private initScrollRevealObserver(): void {
+    if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    // Observe all scroll-reveal elements
+    setTimeout(() => {
+      const elements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+      elements.forEach(el => this.observer?.observe(el));
+    }, 200);
   }
 }

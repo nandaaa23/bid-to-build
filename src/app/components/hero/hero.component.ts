@@ -465,8 +465,60 @@ import { EventService } from '../../services/event.service';
     }
 
     @media (max-width: 1024px) {
-      .hero-main-card, .hero-disco-card, .college-feature-card, .stats-feature-card {
+      .hero-main-card { grid-column: span 12; }
+      .hero-disco-card {
         grid-column: span 12;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 28px 20px;
+      }
+      .college-feature-card { grid-column: span 7; }
+      .stats-feature-card { grid-column: span 5; }
+    }
+
+    @media (max-width: 768px) {
+      .hero-bento-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .hero-main-card {
+        padding: 24px 18px;
+      }
+      .hero-raw-title {
+        font-size: clamp(3.4rem, 16vw, 5.5rem);
+      }
+      .hero-description {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+      }
+      .hero-cta-group .btn {
+        width: 100%;
+      }
+      .hero-disco-card {
+        flex-direction: column;
+        gap: 20px;
+        padding: 22px 16px;
+      }
+      .miso-hero-img {
+        width: 120px;
+      }
+      .college-feature-card {
+        padding: 20px 16px;
+      }
+      .college-title {
+        font-size: 1.35rem;
+      }
+      .stats-feature-card {
+        padding: 18px 12px;
+      }
+      .stat-val {
+        font-size: 1.7rem;
       }
     }
   `]

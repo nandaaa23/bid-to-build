@@ -32639,7 +32639,7 @@ var HeaderComponent = class _HeaderComponent {
     };
   }
   static {
-    this.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 48, vars: 7, consts: [[1, "site-header"], [1, "header-container"], ["href", "#hero", 1, "brand-link"], [1, "raw-brush-logo", "font-brush"], [1, "sub-pill"], ["title", "LBS Institute of Technology for Women", 1, "college-tag"], [1, "pulse-dot"], [1, "college-abbr"], [1, "college-loc"], [1, "site-nav"], ["href", "#hero", 1, "nav-link"], ["href", "#countdown-section", 1, "nav-link"], ["href", "#events", 1, "nav-link"], ["href", "#my-events", 1, "nav-link"], [1, "badge-count"], ["href", "#sponsors", 1, "nav-link"], ["href", "#about", 1, "nav-link"], ["href", "#contact", 1, "nav-link"], [1, "header-actions"], ["title", "Toggle Web Audio Disco Beat", 1, "action-btn", "audio-btn", 3, "click"], [1, "audio-bars"], [1, "bar"], [1, "audio-text"], [1, "theme-toggle-btn", 3, "click", "title"], [1, "toggle-icon"], [1, "theme-text"], ["href", "#events", 1, "btn", "btn-lime", "header-cta"], ["width", "14", "height", "14", "viewBox", "0 0 24 24", "fill", "none", "stroke", "currentColor", "stroke-width", "2.5"], ["d", "M5 12h14M12 5l7 7-7 7"]], template: function HeaderComponent_Template(rf, ctx) {
+    this.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _HeaderComponent, selectors: [["app-header"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 32, vars: 7, consts: [[1, "site-header"], [1, "header-container"], ["href", "#hero", "aria-label", "RAW Home", 1, "brand-link"], [1, "raw-brush-logo", "font-brush"], [1, "sub-pill"], ["aria-label", "Quick Navigation", 1, "site-nav"], ["href", "#events", 1, "nav-link"], ["href", "#my-events", 1, "nav-link"], [1, "badge-count"], ["href", "#sponsors", 1, "nav-link"], [1, "header-actions"], ["title", "Toggle Web Audio Disco Beat", 1, "action-pill", "audio-pill", 3, "click"], [1, "audio-bars"], [1, "bar"], [1, "action-text"], [1, "action-pill", "theme-pill", 3, "click", "title"], [1, "toggle-icon"], ["href", "#events", 1, "btn", "btn-lime", "header-cta"]], template: function HeaderComponent_Template(rf, ctx) {
       if (rf & 1) {
         \u0275\u0275elementStart(0, "header", 0)(1, "div", 1)(2, "a", 2)(3, "span", 3);
         \u0275\u0275text(4, "RAW");
@@ -32647,84 +32647,60 @@ var HeaderComponent = class _HeaderComponent {
         \u0275\u0275elementStart(5, "span", 4);
         \u0275\u0275text(6, "CAMPUS UNFILTERED");
         \u0275\u0275elementEnd()();
-        \u0275\u0275elementStart(7, "div", 5);
-        \u0275\u0275element(8, "span", 6);
-        \u0275\u0275elementStart(9, "span", 7);
-        \u0275\u0275text(10, "LBSITW");
+        \u0275\u0275elementStart(7, "nav", 5)(8, "a", 6);
+        \u0275\u0275text(9, "EVENTS");
         \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(11, "span", 8);
-        \u0275\u0275text(12, "Poojappura, TVM");
+        \u0275\u0275elementStart(10, "a", 7);
+        \u0275\u0275text(11, " MY PASSES ");
+        \u0275\u0275elementStart(12, "span", 8);
+        \u0275\u0275text(13);
         \u0275\u0275elementEnd()();
-        \u0275\u0275elementStart(13, "nav", 9)(14, "a", 10);
-        \u0275\u0275text(15, "HOME");
+        \u0275\u0275elementStart(14, "a", 9);
+        \u0275\u0275text(15, "SPONSORS");
+        \u0275\u0275elementEnd()();
+        \u0275\u0275elementStart(16, "div", 10)(17, "button", 11);
+        \u0275\u0275listener("click", function HeaderComponent_Template_button_click_17_listener() {
+          return ctx.audioService.toggleBeat();
+        });
+        \u0275\u0275elementStart(18, "span", 12);
+        \u0275\u0275element(19, "span", 13)(20, "span", 13)(21, "span", 13);
         \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(16, "a", 11);
-        \u0275\u0275text(17, "COUNTDOWN");
-        \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(18, "a", 12);
-        \u0275\u0275text(19, "EVENTS");
-        \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(20, "a", 13);
-        \u0275\u0275text(21, " MY EVENTS ");
         \u0275\u0275elementStart(22, "span", 14);
         \u0275\u0275text(23);
         \u0275\u0275elementEnd()();
-        \u0275\u0275elementStart(24, "a", 15);
-        \u0275\u0275text(25, "SPONSORS");
-        \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(26, "a", 16);
-        \u0275\u0275text(27, "ABOUT");
-        \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(28, "a", 17);
-        \u0275\u0275text(29, "CONTACT");
-        \u0275\u0275elementEnd()();
-        \u0275\u0275elementStart(30, "div", 18)(31, "button", 19);
-        \u0275\u0275listener("click", function HeaderComponent_Template_button_click_31_listener() {
-          return ctx.audioService.toggleBeat();
-        });
-        \u0275\u0275elementStart(32, "span", 20);
-        \u0275\u0275element(33, "span", 21)(34, "span", 21)(35, "span", 21);
-        \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(36, "span", 22);
-        \u0275\u0275text(37);
-        \u0275\u0275elementEnd()();
-        \u0275\u0275elementStart(38, "button", 23);
-        \u0275\u0275listener("click", function HeaderComponent_Template_button_click_38_listener() {
+        \u0275\u0275elementStart(24, "button", 15);
+        \u0275\u0275listener("click", function HeaderComponent_Template_button_click_24_listener() {
           return ctx.eventService.toggleTheme();
         });
-        \u0275\u0275elementStart(39, "span", 24);
-        \u0275\u0275text(40);
+        \u0275\u0275elementStart(25, "span", 16);
+        \u0275\u0275text(26);
         \u0275\u0275elementEnd();
-        \u0275\u0275elementStart(41, "span", 25);
-        \u0275\u0275text(42);
+        \u0275\u0275elementStart(27, "span", 14);
+        \u0275\u0275text(28);
         \u0275\u0275elementEnd()();
-        \u0275\u0275elementStart(43, "a", 26)(44, "span");
-        \u0275\u0275text(45, "REGISTER NOW");
-        \u0275\u0275elementEnd();
-        \u0275\u0275namespaceSVG();
-        \u0275\u0275elementStart(46, "svg", 27);
-        \u0275\u0275element(47, "path", 28);
+        \u0275\u0275elementStart(29, "a", 17)(30, "span");
+        \u0275\u0275text(31, "REGISTER");
         \u0275\u0275elementEnd()()()()();
       }
       if (rf & 2) {
-        \u0275\u0275advance(23);
+        \u0275\u0275advance(13);
         \u0275\u0275textInterpolate(ctx.eventService.myEventsCount());
-        \u0275\u0275advance(8);
+        \u0275\u0275advance(4);
         \u0275\u0275classProp("playing", ctx.audioService.isPlaying());
         \u0275\u0275advance(6);
-        \u0275\u0275textInterpolate(ctx.audioService.isPlaying() ? "BEAT: ON" : "BEAT: OFF");
+        \u0275\u0275textInterpolate(ctx.audioService.isPlaying() ? "BEAT ON" : "BEAT");
         \u0275\u0275advance();
         \u0275\u0275property("title", ctx.eventService.currentTheme() === "dark" ? "Switch to Disco Light" : "Switch to After Dark");
         \u0275\u0275advance(2);
         \u0275\u0275textInterpolate(ctx.eventService.currentTheme() === "dark" ? "\u26A1" : "\u{1FAA9}");
         \u0275\u0275advance(2);
-        \u0275\u0275textInterpolate(ctx.eventService.currentTheme() === "dark" ? "AFTER DARK" : "DISCO LIGHT");
+        \u0275\u0275textInterpolate(ctx.eventService.currentTheme() === "dark" ? "DARK" : "LIGHT");
       }
-    }, dependencies: [CommonModule], styles: ["\n\n.site-header[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  backdrop-filter: blur(14px);\n  -webkit-backdrop-filter: blur(14px);\n  background-color: var(--header-bg);\n  border-bottom: 2px solid var(--border-color);\n  transition: background-color 0.3s ease, border-color 0.3s ease;\n}\n.header-container[_ngcontent-%COMP%] {\n  max-width: var(--max-w);\n  margin: 0 auto;\n  padding: 12px 24px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 16px;\n}\n.brand-link[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  text-decoration: none;\n}\n.raw-brush-logo[_ngcontent-%COMP%] {\n  font-size: 2.6rem;\n  color: var(--accent-lime);\n  text-shadow: 2px 2px 0px #000;\n  line-height: 1;\n  transform: rotate(-1deg);\n  transition: transform 0.2s ease;\n}\n.brand-link[_ngcontent-%COMP%]:hover   .raw-brush-logo[_ngcontent-%COMP%] {\n  transform: scale(1.08) rotate(1deg);\n}\n.sub-pill[_ngcontent-%COMP%] {\n  font-family: var(--font-body);\n  font-size: 0.7rem;\n  font-weight: 800;\n  letter-spacing: 0.08em;\n  background: var(--purple-midnight);\n  border: 1.5px solid var(--purple-neon);\n  color: var(--accent-lime);\n  padding: 4px 8px;\n  border-radius: var(--radius-sm);\n  text-transform: uppercase;\n}\n.college-tag[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 6px;\n  font-size: 0.78rem;\n  color: var(--text-secondary);\n  background: var(--bg-card);\n  padding: 6px 12px;\n  border-radius: var(--radius-pill);\n  border: 1px solid var(--border-subtle);\n}\n.pulse-dot[_ngcontent-%COMP%] {\n  width: 8px;\n  height: 8px;\n  background-color: var(--accent-lime);\n  border-radius: 50%;\n  box-shadow: 0 0 8px var(--accent-lime);\n  animation: _ngcontent-%COMP%_pulse 1.8s infinite;\n}\n@keyframes _ngcontent-%COMP%_pulse {\n  0%, 100% {\n    opacity: 1;\n    transform: scale(1);\n  }\n  50% {\n    opacity: 0.4;\n    transform: scale(0.85);\n  }\n}\n.college-abbr[_ngcontent-%COMP%] {\n  font-weight: 800;\n  color: var(--text-main);\n}\n.site-nav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 20px;\n}\n.nav-link[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  font-weight: 800;\n  letter-spacing: 0.05em;\n  color: var(--text-secondary);\n  position: relative;\n  text-decoration: none;\n  transition: color 0.15s ease;\n}\n.nav-link[_ngcontent-%COMP%]:hover {\n  color: var(--accent-lime);\n}\n.badge-count[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 18px;\n  height: 18px;\n  font-size: 0.68rem;\n  font-weight: 900;\n  background: var(--accent-lime);\n  color: #000;\n  border-radius: var(--radius-pill);\n  padding: 0 4px;\n  margin-left: 2px;\n}\n.header-actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n.action-btn[_ngcontent-%COMP%], \n.theme-toggle-btn[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  background: var(--bg-card);\n  border: 1.5px solid var(--border-color);\n  padding: 8px 12px;\n  border-radius: var(--radius-pill);\n  font-size: 0.78rem;\n  font-weight: 800;\n  color: var(--text-main);\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n.action-btn[_ngcontent-%COMP%]:hover, \n.theme-toggle-btn[_ngcontent-%COMP%]:hover {\n  border-color: var(--accent-lime);\n  transform: translateY(-1px);\n}\n.audio-bars[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: flex-end;\n  gap: 2px;\n  height: 12px;\n}\n.audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  width: 2.5px;\n  height: 4px;\n  background: var(--text-muted);\n  border-radius: 1px;\n}\n.audio-btn.playing[_ngcontent-%COMP%]   .audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  background: var(--accent-lime);\n  animation: _ngcontent-%COMP%_soundBounce 0.6s infinite alternate;\n}\n.audio-btn.playing[_ngcontent-%COMP%]   .audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%]:nth-child(2) {\n  animation-delay: 0.2s;\n}\n.audio-btn.playing[_ngcontent-%COMP%]   .audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%]:nth-child(3) {\n  animation-delay: 0.4s;\n}\n@keyframes _ngcontent-%COMP%_soundBounce {\n  0% {\n    height: 3px;\n  }\n  100% {\n    height: 12px;\n  }\n}\n.header-cta[_ngcontent-%COMP%] {\n  padding: 10px 18px;\n  font-size: 0.82rem;\n}\n@media (max-width: 992px) {\n  .college-tag[_ngcontent-%COMP%], \n   .site-nav[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=header.component.css.map */"] });
+    }, dependencies: [CommonModule], styles: ["\n\n.site-header[_ngcontent-%COMP%] {\n  position: sticky;\n  top: 0;\n  z-index: 100;\n  backdrop-filter: blur(16px);\n  -webkit-backdrop-filter: blur(16px);\n  background-color: var(--header-bg);\n  border-bottom: 2px solid var(--border-color);\n  transition: background-color 0.3s ease, border-color 0.3s ease;\n}\n.header-container[_ngcontent-%COMP%] {\n  max-width: var(--max-w);\n  margin: 0 auto;\n  padding: 10px 24px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 20px;\n}\n.brand-link[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  text-decoration: none;\n}\n.raw-brush-logo[_ngcontent-%COMP%] {\n  font-size: 2.6rem;\n  color: var(--accent-lime);\n  text-shadow: 2px 2px 0px #000;\n  line-height: 1;\n  transform: rotate(-1deg);\n  transition: transform 0.2s ease;\n}\n.brand-link[_ngcontent-%COMP%]:hover   .raw-brush-logo[_ngcontent-%COMP%] {\n  transform: scale(1.08) rotate(1deg);\n}\n.sub-pill[_ngcontent-%COMP%] {\n  font-family: var(--font-body);\n  font-size: 0.68rem;\n  font-weight: 800;\n  letter-spacing: 0.08em;\n  background: var(--purple-midnight);\n  border: 1px solid var(--purple-neon);\n  color: var(--accent-lime);\n  padding: 3px 8px;\n  border-radius: var(--radius-sm);\n  text-transform: uppercase;\n}\n.site-nav[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 28px;\n}\n.nav-link[_ngcontent-%COMP%] {\n  font-size: 0.85rem;\n  font-weight: 800;\n  letter-spacing: 0.08em;\n  color: var(--text-secondary);\n  position: relative;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  display: flex;\n  align-items: center;\n  gap: 6px;\n}\n.nav-link[_ngcontent-%COMP%]:hover {\n  color: var(--accent-lime);\n}\n.badge-count[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  min-width: 18px;\n  height: 18px;\n  font-size: 0.65rem;\n  font-weight: 900;\n  background: var(--accent-lime);\n  color: #000;\n  border-radius: var(--radius-pill);\n  padding: 0 4px;\n}\n.header-actions[_ngcontent-%COMP%] {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n.action-pill[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  background: var(--purple-midnight);\n  border: 1.5px solid var(--border-color);\n  padding: 7px 12px;\n  border-radius: var(--radius-pill);\n  font-size: 0.75rem;\n  font-weight: 800;\n  color: var(--text-main);\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n.action-pill[_ngcontent-%COMP%]:hover {\n  border-color: var(--accent-lime);\n  transform: translateY(-2px);\n}\n.action-text[_ngcontent-%COMP%] {\n  font-size: 0.72rem;\n  letter-spacing: 0.05em;\n}\n.audio-bars[_ngcontent-%COMP%] {\n  display: inline-flex;\n  align-items: flex-end;\n  gap: 2px;\n  height: 11px;\n}\n.audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  width: 2.5px;\n  height: 4px;\n  background: var(--text-muted);\n  border-radius: 1px;\n}\n.audio-pill.playing[_ngcontent-%COMP%]   .audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%] {\n  background: var(--accent-lime);\n  animation: _ngcontent-%COMP%_soundBounce 0.5s infinite alternate;\n}\n.audio-pill.playing[_ngcontent-%COMP%]   .audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%]:nth-child(2) {\n  animation-delay: 0.15s;\n}\n.audio-pill.playing[_ngcontent-%COMP%]   .audio-bars[_ngcontent-%COMP%]   .bar[_ngcontent-%COMP%]:nth-child(3) {\n  animation-delay: 0.3s;\n}\n@keyframes _ngcontent-%COMP%_soundBounce {\n  0% {\n    height: 3px;\n  }\n  100% {\n    height: 11px;\n  }\n}\n.header-cta[_ngcontent-%COMP%] {\n  padding: 8px 18px;\n  font-size: 0.8rem;\n  letter-spacing: 0.05em;\n}\n@media (max-width: 768px) {\n  .site-nav[_ngcontent-%COMP%] {\n    display: none;\n  }\n  .sub-pill[_ngcontent-%COMP%] {\n    display: none;\n  }\n}\n/*# sourceMappingURL=header.component.css.map */"] });
   }
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HeaderComponent, { className: "HeaderComponent", filePath: "src\\app\\components\\header\\header.component.ts", lineNumber: 260 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(HeaderComponent, { className: "HeaderComponent", filePath: "src\\app\\components\\header\\header.component.ts", lineNumber: 226 });
 })();
 
 // src/app/components/hero/hero.component.ts
@@ -40704,41 +40680,134 @@ var FloatingMisoComponent = class _FloatingMisoComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(FloatingMisoComponent, { className: "FloatingMisoComponent", filePath: "src\\app\\components\\floating-miso\\floating-miso.component.ts", lineNumber: 122 });
 })();
 
+// src/app/components/preloader/preloader.component.ts
+function PreloaderComponent_Conditional_0_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "div", 1)(1, "div", 2)(2, "div", 3);
+    \u0275\u0275element(3, "img", 4);
+    \u0275\u0275elementStart(4, "div", 5);
+    \u0275\u0275text(5, "\u{1FAA9}");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(6, "h1", 6);
+    \u0275\u0275text(7, " RAW");
+    \u0275\u0275elementStart(8, "span", 7);
+    \u0275\u0275text(9, ".");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(10, "span", 8);
+    \u0275\u0275text(11, "CAMPUS UNFILTERED // 2026");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(12, "div", 9);
+    \u0275\u0275element(13, "div", 10);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(14, "div", 11)(15, "span");
+    \u0275\u0275text(16);
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(17, "span", 12);
+    \u0275\u0275text(18);
+    \u0275\u0275elementEnd()()()();
+  }
+  if (rf & 2) {
+    const ctx_r0 = \u0275\u0275nextContext();
+    \u0275\u0275classProp("fade-out", ctx_r0.isFading());
+    \u0275\u0275advance(13);
+    \u0275\u0275styleProp("width", ctx_r0.progress(), "%");
+    \u0275\u0275advance(3);
+    \u0275\u0275textInterpolate(ctx_r0.statusText());
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate1("", ctx_r0.progress(), "%");
+  }
+}
+var PreloaderComponent = class _PreloaderComponent {
+  constructor() {
+    this.progress = signal(0);
+    this.statusText = signal("CHARGING CAMPUS VIBES...");
+    this.isFading = signal(false);
+    this.isDone = signal(false);
+  }
+  ngOnInit() {
+    const steps = [
+      { at: 25, text: "SYNCHING DISCO LIGHTS..." },
+      { at: 55, text: "TUNING 7 TITAN BATTLES..." },
+      { at: 85, text: "MISO IS HYPED..." },
+      { at: 100, text: "UNFILTERED ENERGY READY! \u26A1" }
+    ];
+    let current = 0;
+    const interval = setInterval(() => {
+      current += Math.floor(Math.random() * 12) + 6;
+      if (current >= 100) {
+        current = 100;
+        this.progress.set(100);
+        this.statusText.set("WELCOME TO RAW '26 \u{1FAA9}");
+        clearInterval(interval);
+        setTimeout(() => {
+          this.isFading.set(true);
+          setTimeout(() => {
+            this.isDone.set(true);
+          }, 600);
+        }, 400);
+      } else {
+        this.progress.set(current);
+        const matched = steps.find((s) => current <= s.at);
+        if (matched)
+          this.statusText.set(matched.text);
+      }
+    }, 70);
+  }
+  static {
+    this.\u0275fac = function PreloaderComponent_Factory(__ngFactoryType__) {
+      return new (__ngFactoryType__ || _PreloaderComponent)();
+    };
+  }
+  static {
+    this.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _PreloaderComponent, selectors: [["app-preloader"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 1, vars: 1, consts: [[1, "preloader-overlay", 3, "fade-out"], [1, "preloader-overlay"], [1, "preloader-content"], [1, "preloader-mascot-box"], ["src", "assets/miso_music_trans.png", "alt", "Miso loading", 1, "preloader-miso-img"], [1, "discoball-spinner"], [1, "preloader-title", "font-brush"], [1, "period"], [1, "preloader-sub", "font-mono"], [1, "progress-track"], [1, "progress-fill"], [1, "status-row", "font-mono"], [1, "percentage"]], template: function PreloaderComponent_Template(rf, ctx) {
+      if (rf & 1) {
+        \u0275\u0275template(0, PreloaderComponent_Conditional_0_Template, 19, 6, "div", 0);
+      }
+      if (rf & 2) {
+        \u0275\u0275conditional(!ctx.isDone() ? 0 : -1);
+      }
+    }, dependencies: [CommonModule], styles: ["\n\n.preloader-overlay[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  z-index: 9999;\n  background:\n    radial-gradient(\n      circle at center,\n      #250E46 0%,\n      #0B0414 85%);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);\n}\n.preloader-overlay.fade-out[_ngcontent-%COMP%] {\n  opacity: 0;\n  transform: translateY(-40px) scale(1.02);\n  pointer-events: none;\n}\n.preloader-content[_ngcontent-%COMP%] {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  max-width: 360px;\n  width: 90%;\n}\n.preloader-mascot-box[_ngcontent-%COMP%] {\n  position: relative;\n  margin-bottom: 12px;\n}\n.preloader-miso-img[_ngcontent-%COMP%] {\n  width: 95px;\n  height: auto;\n  filter: drop-shadow(0 10px 20px rgba(104, 38, 212, 0.6));\n  animation: _ngcontent-%COMP%_mascotBounce 0.5s infinite alternate ease-in-out;\n}\n.discoball-spinner[_ngcontent-%COMP%] {\n  position: absolute;\n  top: -16px;\n  right: -10px;\n  font-size: 1.8rem;\n  animation: _ngcontent-%COMP%_spinBall 2s linear infinite;\n}\n@keyframes _ngcontent-%COMP%_mascotBounce {\n  0% {\n    transform: translateY(0);\n  }\n  100% {\n    transform: translateY(-10px);\n  }\n}\n@keyframes _ngcontent-%COMP%_spinBall {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.preloader-title[_ngcontent-%COMP%] {\n  font-size: clamp(3.8rem, 8vw, 5.5rem);\n  color: var(--accent-lime);\n  text-shadow: 4px 4px 0px #140726, 0 0 30px rgba(215, 255, 100, 0.5);\n  line-height: 0.9;\n  margin-bottom: 6px;\n  transform: rotate(-1.5deg);\n}\n.period[_ngcontent-%COMP%] {\n  color: var(--purple-neon);\n}\n.preloader-sub[_ngcontent-%COMP%] {\n  font-size: 0.78rem;\n  letter-spacing: 0.2em;\n  color: var(--text-secondary);\n  margin-bottom: 24px;\n}\n.progress-track[_ngcontent-%COMP%] {\n  width: 100%;\n  height: 6px;\n  background: rgba(255, 255, 255, 0.1);\n  border-radius: 999px;\n  overflow: hidden;\n  border: 1px solid var(--purple-electric);\n  margin-bottom: 12px;\n}\n.progress-fill[_ngcontent-%COMP%] {\n  height: 100%;\n  background:\n    linear-gradient(\n      90deg,\n      var(--purple-neon) 0%,\n      var(--accent-lime) 100%);\n  border-radius: 999px;\n  box-shadow: 0 0 12px var(--accent-lime);\n  transition: width 0.15s ease-out;\n}\n.status-row[_ngcontent-%COMP%] {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  font-size: 0.75rem;\n  color: var(--text-secondary);\n}\n.percentage[_ngcontent-%COMP%] {\n  color: var(--accent-lime);\n  font-weight: 800;\n}\n/*# sourceMappingURL=preloader.component.css.map */"] });
+  }
+};
+(() => {
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(PreloaderComponent, { className: "PreloaderComponent", filePath: "src\\app\\components\\preloader\\preloader.component.ts", lineNumber: 150 });
+})();
+
 // src/app/app.component.ts
-function AppComponent_Conditional_15_Template(rf, ctx) {
+function AppComponent_Conditional_16_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 5);
-    \u0275\u0275listener("click", function AppComponent_Conditional_15_Template_div_click_0_listener() {
+    \u0275\u0275elementStart(0, "div", 6);
+    \u0275\u0275listener("click", function AppComponent_Conditional_16_Template_div_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.closeCancelModal());
     });
-    \u0275\u0275elementStart(1, "div", 6);
-    \u0275\u0275listener("click", function AppComponent_Conditional_15_Template_div_click_1_listener($event) {
+    \u0275\u0275elementStart(1, "div", 7);
+    \u0275\u0275listener("click", function AppComponent_Conditional_16_Template_div_click_1_listener($event) {
       \u0275\u0275restoreView(_r1);
       return \u0275\u0275resetView($event.stopPropagation());
     });
-    \u0275\u0275elementStart(2, "h3", 7);
+    \u0275\u0275elementStart(2, "h3", 8);
     \u0275\u0275text(3, "CANCEL EVENT PASS?");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "p", 8);
+    \u0275\u0275elementStart(4, "p", 9);
     \u0275\u0275text(5, " Are you sure you want to cancel your pass for ");
     \u0275\u0275elementStart(6, "strong");
     \u0275\u0275text(7);
     \u0275\u0275elementEnd();
     \u0275\u0275text(8, "? Your seat will be restored to other students. ");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(9, "div", 9)(10, "button", 10);
-    \u0275\u0275listener("click", function AppComponent_Conditional_15_Template_button_click_10_listener() {
+    \u0275\u0275elementStart(9, "div", 10)(10, "button", 11);
+    \u0275\u0275listener("click", function AppComponent_Conditional_16_Template_button_click_10_listener() {
       const pass_r3 = \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.confirmCancel(pass_r3.id));
     });
     \u0275\u0275text(11, "YES, CANCEL PASS");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(12, "button", 11);
-    \u0275\u0275listener("click", function AppComponent_Conditional_15_Template_button_click_12_listener() {
+    \u0275\u0275elementStart(12, "button", 12);
+    \u0275\u0275listener("click", function AppComponent_Conditional_16_Template_button_click_12_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r1.closeCancelModal());
@@ -40754,6 +40823,14 @@ function AppComponent_Conditional_15_Template(rf, ctx) {
 var AppComponent = class _AppComponent {
   constructor() {
     this.eventService = inject(EventService);
+    this.observer = null;
+  }
+  ngAfterViewInit() {
+    this.initScrollRevealObserver();
+  }
+  ngOnDestroy() {
+    if (this.observer)
+      this.observer.disconnect();
   }
   closeCancelModal() {
     this.eventService.pendingCancelPass.set(null);
@@ -40762,32 +40839,52 @@ var AppComponent = class _AppComponent {
     this.eventService.cancelRegistration(regId);
     this.closeCancelModal();
   }
+  initScrollRevealObserver() {
+    if (typeof window === "undefined" || !("IntersectionObserver" in window))
+      return;
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        }
+      });
+    }, {
+      threshold: 0.08,
+      rootMargin: "0px 0px -40px 0px"
+    });
+    setTimeout(() => {
+      const elements = document.querySelectorAll(".scroll-reveal, .scroll-reveal-left, .scroll-reveal-right");
+      elements.forEach((el) => this.observer?.observe(el));
+    }, 200);
+  }
   static {
     this.\u0275fac = function AppComponent_Factory(__ngFactoryType__) {
       return new (__ngFactoryType__ || _AppComponent)();
     };
   }
   static {
-    this.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 17, vars: 1, consts: [["aria-hidden", "true", 1, "ambient-beams"], [1, "beam-ray", "beam-purple-dark"], [1, "beam-ray", "beam-lime-glow"], [1, "container"], [1, "modal-backdrop"], [1, "modal-backdrop", 3, "click"], [1, "cancel-modal-card", "bento-card", "come-in", 3, "click"], [1, "font-brush", "cancel-title"], [1, "cancel-desc"], [1, "cancel-btns-row"], [1, "btn", "btn-danger", 3, "click"], [1, "btn", "btn-outline", 3, "click"]], template: function AppComponent_Template(rf, ctx) {
+    this.\u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AppComponent, selectors: [["app-root"]], standalone: true, features: [\u0275\u0275StandaloneFeature], decls: 18, vars: 1, consts: [["aria-hidden", "true", 1, "ambient-beams"], [1, "beam-ray", "beam-purple-dark"], [1, "beam-ray", "beam-lime-glow"], [1, "container"], [1, "scroll-reveal"], [1, "modal-backdrop"], [1, "modal-backdrop", 3, "click"], [1, "cancel-modal-card", "bento-card", "come-in", 3, "click"], [1, "font-brush", "cancel-title"], [1, "cancel-desc"], [1, "cancel-btns-row"], [1, "btn", "btn-danger", 3, "click"], [1, "btn", "btn-outline", 3, "click"]], template: function AppComponent_Template(rf, ctx) {
       if (rf & 1) {
-        \u0275\u0275elementStart(0, "div", 0);
-        \u0275\u0275element(1, "div", 1)(2, "div", 2);
+        \u0275\u0275element(0, "app-preloader");
+        \u0275\u0275elementStart(1, "div", 0);
+        \u0275\u0275element(2, "div", 1)(3, "div", 2);
         \u0275\u0275elementEnd();
-        \u0275\u0275element(3, "app-header");
-        \u0275\u0275elementStart(4, "main", 3);
-        \u0275\u0275element(5, "app-hero")(6, "app-days-timer")(7, "app-events-discovery")(8, "app-my-events")(9, "app-sponsors")(10, "app-about");
+        \u0275\u0275element(4, "app-header");
+        \u0275\u0275elementStart(5, "main", 3);
+        \u0275\u0275element(6, "app-hero")(7, "app-days-timer", 4)(8, "app-events-discovery", 4)(9, "app-my-events", 4)(10, "app-sponsors", 4)(11, "app-about", 4);
         \u0275\u0275elementEnd();
-        \u0275\u0275element(11, "app-footer")(12, "app-registration-modal")(13, "app-success-modal")(14, "app-trailer-modal");
-        \u0275\u0275template(15, AppComponent_Conditional_15_Template, 14, 1, "div", 4);
-        \u0275\u0275element(16, "app-floating-miso");
+        \u0275\u0275element(12, "app-footer", 4)(13, "app-registration-modal")(14, "app-success-modal")(15, "app-trailer-modal");
+        \u0275\u0275template(16, AppComponent_Conditional_16_Template, 14, 1, "div", 5);
+        \u0275\u0275element(17, "app-floating-miso");
       }
       if (rf & 2) {
         let tmp_0_0;
-        \u0275\u0275advance(15);
-        \u0275\u0275conditional((tmp_0_0 = ctx.eventService.pendingCancelPass()) ? 15 : -1, tmp_0_0);
+        \u0275\u0275advance(16);
+        \u0275\u0275conditional((tmp_0_0 = ctx.eventService.pendingCancelPass()) ? 16 : -1, tmp_0_0);
       }
     }, dependencies: [
       CommonModule,
+      PreloaderComponent,
       HeaderComponent,
       HeroComponent,
       DaysTimerComponent,
@@ -40800,11 +40897,11 @@ var AppComponent = class _AppComponent {
       SuccessModalComponent,
       TrailerModalComponent,
       FloatingMisoComponent
-    ], styles: ["\n\nmain.container[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  padding-top: 30px;\n}\n.modal-backdrop[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  z-index: 1000;\n  background: var(--modal-bg);\n  backdrop-filter: blur(12px);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n}\n.cancel-modal-card[_ngcontent-%COMP%] {\n  width: 100%;\n  max-width: 440px;\n  background: var(--bg-card);\n  border: 2px solid var(--purple-neon);\n  padding: 32px 28px;\n  text-align: center;\n}\n.cancel-title[_ngcontent-%COMP%] {\n  font-size: 2rem;\n  color: var(--raw-danger);\n  margin-bottom: 10px;\n}\n.cancel-desc[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n  color: var(--text-secondary);\n  line-height: 1.5;\n  margin-bottom: 24px;\n}\n.cancel-btns-row[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 12px;\n}\n.cancel-btns-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  flex: 1;\n}\n/*# sourceMappingURL=app.component.css.map */"] });
+    ], styles: ["\n\nmain.container[_ngcontent-%COMP%] {\n  position: relative;\n  z-index: 2;\n  padding-top: 24px;\n}\n.modal-backdrop[_ngcontent-%COMP%] {\n  position: fixed;\n  inset: 0;\n  z-index: 1000;\n  background: var(--modal-bg);\n  backdrop-filter: blur(12px);\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 20px;\n}\n.cancel-modal-card[_ngcontent-%COMP%] {\n  width: 100%;\n  max-width: 440px;\n  background: var(--bg-card);\n  border: 2px solid var(--purple-neon);\n  padding: 32px 28px;\n  text-align: center;\n}\n.cancel-title[_ngcontent-%COMP%] {\n  font-size: 2rem;\n  color: var(--raw-danger);\n  margin-bottom: 10px;\n}\n.cancel-desc[_ngcontent-%COMP%] {\n  font-size: 0.95rem;\n  color: var(--text-secondary);\n  line-height: 1.5;\n  margin-bottom: 24px;\n}\n.cancel-btns-row[_ngcontent-%COMP%] {\n  display: flex;\n  gap: 12px;\n}\n.cancel-btns-row[_ngcontent-%COMP%]   button[_ngcontent-%COMP%] {\n  flex: 1;\n}\n/*# sourceMappingURL=app.component.css.map */"] });
   }
 };
 (() => {
-  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 134 });
+  (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AppComponent, { className: "AppComponent", filePath: "src\\app\\app.component.ts", lineNumber: 139 });
 })();
 
 // src/main.ts
